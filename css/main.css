@@ -73,14 +73,14 @@ header {
 	text-align: center;
 	box-sizing: border-box;
 }
- 
+
 #title img {
 	width: 100px;
 	height: 100px;
 	float: right;
 	padding-right: 45px;
 }
- 
+
 h1 {
 	font-size: 85px;
 	color: #000000;
@@ -101,7 +101,7 @@ button {
 }
 
 h2 {
-    height: 60px;
+	height: 60px;
 }
 
 .shows {
@@ -136,7 +136,7 @@ img {
 	background: rgba(7, 7, 197, 0.85);
 }
 
-h3 { 
+h3 {
 	border-bottom: 2px solid #A0FA4E;
 }
 
@@ -147,14 +147,14 @@ h3 {
 
 .showsBox {
 	position: absolute;
-    max-width: 90%;
-    max-height: 90%; 
+	max-width: 90%;
+	max-height: 90%;
 	top: 5%;
-    left: 0px;
-    right: 0px;
-    bottom: 5%;
+	left: 0px;
+	right: 0px;
+	bottom: 5%;
 	margin: auto;
-	width: 400px; 
+	width: 400px;
 	height: 550px;
 	color: white;
 }
@@ -162,73 +162,73 @@ h3 {
 #lightBoxClose {
 	text-align: right;
 	position: fixed;
-    cursor: pointer;
+	cursor: pointer;
 	padding: 5px 10px;
 	top: 10px;
 	right: 15px;
 	font-size: 30px;
 	color: white;
-    background: gray;
-    border: 1px solid #999;
+	background: gray;
+	border: 1px solid #999;
 	border-radius: 10px;
 }
 
 body {
-  background: #f9f9f9;
+	background: #f9f9f9;
 }
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .container > img {
-  width: 50%;
+	width: 50%;
 }
 .container > h1 {
-  font-family: 'Montserrat', impact;
-  font-weight: 800;
-  font-size: 2.5em;
-  margin-top: -1%;
-  color: #4caaa8;
-  text-shadow: 1px 1px #f2cd99;
-  letter-spacing: 2px;
+	font-family: 'Montserrat', impact;
+	font-weight: 800;
+	font-size: 2.5em;
+	margin-top: -1%;
+	color: #4caaa8;
+	text-shadow: 1px 1px #f2cd99;
+	letter-spacing: 2px;
 }
 /* ======= CAROUSEL SECTION ======== */
 .carousel-container {
-  width: 70%;
-  display: flex;
-  justify-content: space-around;
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
 }
 .carousel-images {
-  width: 80%;
-  background: #fa8d8e;
-  padding: 10px;
-  border-radius: 10px;
-  box-sizing: border-box;
-  box-shadow: 2px 2px #f2cd99;
+	width: 80%;
+	background: #fa8d8e;
+	padding: 10px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	box-shadow: 2px 2px #f2cd99;
 }
 .carousel-images img {
-  width: 100%;
-  border-radius: 10px;
-  display: none;
+	width: 100%;
+	border-radius: 10px;
+	display: none;
 }
 
 .carousel-images img:first-of-type{
-  display: block;
+	display: block;
 }
 
 .carousel-button {
-  align-self: center;
-  background: #f2cd99;
-  color: #888;
-  padding: 10px;
-  border-radius: 50%;
-  text-align: center;
-  box-shadow: 1px 1px #fa8d8e;
+	align-self: center;
+	background: #f2cd99;
+	color: #888;
+	padding: 10px;
+	border-radius: 50%;
+	text-align: center;
+	box-shadow: 1px 1px #fa8d8e;
 }
 .carousel-button:hover {
-  cursor: pointer;
-  background: #fa8d8e;
-  box-shadow: 1px 1px #f2cd99;
-  color: white;
+	cursor: pointer;
+	background: #fa8d8e;
+	box-shadow: 1px 1px #f2cd99;
+	color: white;
 }
