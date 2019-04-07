@@ -1,3 +1,4 @@
+
 let app = {};
 
 
@@ -93,7 +94,7 @@ $(() => {
 	let currentImgIndex = 0;
 	let highestIndex = $('.carousel-images').children().length - 1;
 	// next button
-	$('.next').on('click', () => {
+	$('.next').click(function() {
 		// hide current image
 		$('.carousel-images').children().eq(currentImgIndex).css('display', 'none');
 		// increment image index
@@ -106,9 +107,9 @@ $(() => {
 
 		// show current image
 		$('.carousel-images').children().eq(currentImgIndex).css('display', 'block');
-	})
+	});
 
-	$('.previous').on('click', () => {
+	$('.previous').click(function() {
 		// hide current image
 		$('.carousel-images').children().eq(currentImgIndex).css('display', 'none');
 		// decrement the image index
@@ -121,5 +122,5 @@ $(() => {
 		// show current image
 		$('.carousel-images').children().eq(currentImgIndex).css('display', 'block');
 
-	})
-})
+	});
+});
