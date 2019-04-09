@@ -1,3 +1,7 @@
 
-=javascript:S1116R"Remove this empty statement.(ôŸìúÿÿÿÿ
-=javascript:S1116%"Remove this empty statement.(ôŸìúÿÿÿÿ
+]javascript:S1854I":Remove this useless assignment to local variable "genres1"(¥©õ³8û¡ŞòŸ-
+bjavascript:S1854H":Remove this useless assignment to local variable "genres2"(İºïôúÿÿÿÿ8û¡ŞòŸ-
+ijavascript:UnusedVariableH"8Remove the declaration of the unused 'genres2' variable.(İºïôúÿÿÿÿ8û¡ŞòŸ-
+djavascript:UnusedVariableI"8Remove the declaration of the unused 'genres1' variable.(¥©õ³8û¡ŞòŸ-
+Djavascript:S1116<"Remove this empty statement.(ôŸìúÿÿÿÿ8¬šüÌŸ-
+Djavascript:S1116i"Remove this empty statement.(ôŸìúÿÿÿÿ8‘ˆƒíŸ-

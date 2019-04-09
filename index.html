@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>TV ShowTime</title>
-
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
@@ -12,48 +13,119 @@
                 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
                 crossorigin="anonymous">
         </script>
+        <script src="js/responsive-nav.js"></script>
     </head>
     <body>
         <header>
-            <div id="title">
-                <h1><span style="color:#A0FA4E;font-weight:bold;font-family:"Comic Sans MS";">TV </span><span style="color:#0707C4;font-weight:bold;font-family:Times;">ShowTime</span></h1>
-            </div>
-            <div class="topnav">
-                <a class="active" href="#Directory">Directory</a>
-                <a href="#Calendar">Calendar</a>
-                <a href="#MyShows">My Shows</a>
-                <a href="#ContactMe">Contact Me</a>
-            </div>
-
+            <a href="#home" class="logo" data-scroll><span style="color:#A0FA4E;font-weight:bold;">TV </span><span style="color:#FFFFFF;font-weight:bold;font-family:Times;">ShowTime</a>
+            <nav class="nav-collapse">
+                <ul>
+                    <li class="menu-item active"><a href="#home" data-scroll>Home</a></li>
+                    <li class="menu-item"><a href="#about" data-scroll>About TV ShowTime</a></li>
+                    <li class="menu-item"><a href="#calendar" data-scroll>Calendar</a></li>
+                    <li class="menu-item"><a href="#myShows" data-scroll>My Shows</a></li>
+                    <li class="menu-item"><a href="#contact" data-scroll>Contact Me</a></li>
+                </ul>
+            </nav>
         </header>
-        <div class="container">
-            <div class="carousel-container">
-                <div class="carousel-button previous">
-                    <span class="lnr lnr-chevron-left"></span>
-                </div>
-                <div class="carousel-images">
-                    <img src="images/GOT.jpg" alt="Game of Thrones">
-                    <img src="images/HandmaidsTale.jpg" alt="The Handmaid's Tale">
-                    <img src="images/Office.jpg" alt="The Office">
-                    <img src="images/Fleabag.jpg" alt="Fleabag">
-                </div>
-                <div class="carousel-button next">
-                    <span class="lnr lnr-chevron-right"></span>
-                </div>
-            </div>
-        </div>
-        <main>
-            <form>
-                <p>Search for a show:</p>
-                <input type="text" placeholder="Search">
-                <button>Search</button>
-                <p class="showResult">
-                </p>
-            </form>
-            <div id="tvShows">
+        <section>
+            <div id="carousel" style="display: block">
+                <div class="slideshow-container">
 
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 8</div>
+                        <img src="images/GOT.jpg" alt="" style="width:100%">
+                        <div class="text">Game of Thrones</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 8</div>
+                        <img src="images/Fleabag.jpg" alt="" style="width:100%">
+                        <div class="text">Fleabag</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 8</div>
+                        <img src="images/LastKing.jpg" alt="" style="width:100%">
+                        <div class="text">The Last Kingdom</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 8</div>
+                        <img src="images/PeakyBlinders.jpg" alt="" style="width:100%">
+                        <div class="text">Peaky Blinders</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 8</div>
+                        <img src="images/RealShrill.jpg" alt="" style="width:100%">
+                        <div class="text">Shrill</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 8</div>
+                        <img src="images/Shameless.jpg" alt="" style="width:100%">
+                        <div class="text">Shameless</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">7 / 8</div>
+                        <img src="images/Sopranos.jpg" alt="" style="width:100%">
+                        <div class="text">The Sopranos</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">8 / 8</div>
+                        <img src="images/StrangerThings.jpg" alt="" style="width:100%">
+                        <div class="text">Stranger Things</div>
+                    </div>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
+        </section>
+        <main>
+            <section id="home">
+                <h3>Search For TV Shows:</h3>
+                <form>
+                    <input type="text" placeholder="Search">
+                    <button>Search</button>
+                </form>
+                <div id="tvShows">
+
+                </div>
+            </section>
         </main>
+
+
+        <section id="about">
+            <h1>About <span style="color:#A0FA4E;font-weight:bold;font-family:"Comic Sans MS";">TV </span><span style="color:#0707C4;font-weight:bold;font-family:Times;">ShowTime</span></h1>
+        </section>
+
+        <section id="calendar">
+            <h1>Calendar</h1>
+        </section>
+
+        <section id="myShows">
+            <h1>My Shows:</h1>
+        </section>
+
+        <section id="contact">
+            <h1>Contact Information:</h1>
+        </section>
+
+
 
 
 
@@ -61,5 +133,8 @@
         <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
         <script src="js/app.js"></script>
+        <script src="js/fastclick.js"></script>
+        <script src="js/scroll.js"></script>
+        <script src="js/fixed-responsive-nav.js"></script>
     </body>
 </html>

@@ -1,3 +1,26 @@
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+	let i;
+	let slides = document.getElementsByClassName("mySlides");
+	let dots = document.getElementsByClassName("dot");
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+	slideIndex++;
+	if (slideIndex > slides.length) {slideIndex = 1}
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+	slides[slideIndex-1].style.display = "block";
+	dots[slideIndex-1].className += " active";
+	setTimeout(showSlides, 5000);
+}
+
+
+
+
 
 let app = {};
 
@@ -64,7 +87,7 @@ app.displayTV = function(tvInfoArray){
 		count = $('.shows').length;
 		$('.showResult').text('You have ' + count + ' result.').css('color', 'purple');
 
-		let showsInfo = $('<div>').addClass('showsInfo').append(imageBox, nameBox, language, genres, genres1, genres2, channel, country, summary);
+		let showsInfo = $('<div>').addClass('showsInfo').append(imageBox, nameBox, language, genres, channel, country, summary);
 
 		$('.shows').click(function(e){
 			e.preventDefault();
@@ -90,37 +113,43 @@ app.displayTV = function(tvInfoArray){
 	});
 };
 
-$(() => {
-	let currentImgIndex = 0;
-	let highestIndex = $('.carousel-images').children().length - 1;
-	// next button
-	$('.next').click(function() {
-		// hide current image
-		$('.carousel-images').children().eq(currentImgIndex).css('display', 'none');
-		// increment image index
-		if (currentImgIndex < highestIndex) {
-			currentImgIndex++;
-		}
-		else {
-			currentImgIndex = 0;
-		}
 
-		// show current image
-		$('.carousel-images').children().eq(currentImgIndex).css('display', 'block');
-	});
 
-	$('.previous').click(function() {
-		// hide current image
-		$('.carousel-images').children().eq(currentImgIndex).css('display', 'none');
-		// decrement the image index
-		if (currentImgIndex > 0) {
-			currentImgIndex--;
-		}
-		else {
-			currentImgIndex = highestIndex;
-		}
-		// show current image
-		$('.carousel-images').children().eq(currentImgIndex).css('display', 'block');
 
-	});
-});
+
+
+
+// $(() => {
+// 	let currentImgIndex = 0;
+// 	let highestIndex = $('.carousel-images').children().length - 1;
+// 	// next button
+// 	$('.next').click(function() {
+// 		// hide current image
+// 		$('.carousel-images').children().eq(currentImgIndex).css('display', 'none');
+// 		// increment image index
+// 		if (currentImgIndex < highestIndex) {
+// 			currentImgIndex++;
+// 		}
+// 		else {
+// 			currentImgIndex = 0;
+// 		}
+//
+// 		// show current image
+// 		$('.carousel-images').children().eq(currentImgIndex).css('display', 'block');
+// 	});
+//
+// 	$('.previous').click(function() {
+// 		// hide current image
+// 		$('.carousel-images').children().eq(currentImgIndex).css('display', 'none');
+// 		// decrement the image index
+// 		if (currentImgIndex > 0) {
+// 			currentImgIndex--;
+// 		}
+// 		else {
+// 			currentImgIndex = highestIndex;
+// 		}
+// 		// show current image
+// 		$('.carousel-images').children().eq(currentImgIndex).css('display', 'block');
+//
+// 	});
+// });
