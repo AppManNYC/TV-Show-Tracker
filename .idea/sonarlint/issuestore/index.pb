@@ -6,8 +6,6 @@
 :
 
 index.html,f/6/f6013a00b362253c64368d6eebc50ea2131754e2
-=
-shitcode.html,b/3/b3ea0dc17c9543fd0cbbe8686435b5d9d6228a48
 >
 css/styles.css,8/3/8321775d26c1b74276abda7aafa418d98009580c
 <

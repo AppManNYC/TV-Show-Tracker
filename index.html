@@ -1,140 +1,308 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>TV ShowTime</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/styles.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-        <script src="http://code.jquery.com/jquery-3.1.1.min.js"
-                integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-                crossorigin="anonymous">
-        </script>
-        <script src="js/responsive-nav.js"></script>
-    </head>
-    <body>
-        <header>
-            <a href="#home" class="logo" data-scroll><span style="color:#A0FA4E;font-weight:bold;">TV </span><span style="color:#FFFFFF;font-weight:bold;font-family:Times;">ShowTime</a>
-            <nav class="nav-collapse">
-                <ul>
-                    <li class="menu-item active"><a href="#home" data-scroll>Home</a></li>
-                    <li class="menu-item"><a href="#about" data-scroll>About TV ShowTime</a></li>
-                    <li class="menu-item"><a href="#calendar" data-scroll>Calendar</a></li>
-                    <li class="menu-item"><a href="#myShows" data-scroll>My Shows</a></li>
-                    <li class="menu-item"><a href="#contact" data-scroll>Contact Me</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section>
-            <div id="carousel" style="display: block">
-                <div class="slideshow-container">
+<head>
+    <meta charset="UTF-8">
+    <title>TV ShowTime</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous">
+    </script>
+    <script src="js/responsive-nav.js"></script>
+</head>
+<body>
+<header>
+    <a href="#home" class="logo" data-scroll><span style="color:#A0FA4E;font-weight:bold;">TV </span><span style="color:#FFFFFF;font-weight:bold;font-family:Times;">ShowTime</a>
+    <nav class="nav-collapse">
+        <ul>
+            <li class="menu-item active"><a href="#home" data-scroll>Home</a></li>
+            <li class="menu-item"><a href="#showSearch" data-scroll>Search</a></li>
+            <li class="menu-item"><a href="#calendar" data-scroll>Calendar</a></li>
+            <li class="menu-item"><a href="#myShows" data-scroll>My Shows</a></li>
+            <li class="menu-item"><a href="#contact" data-scroll>Contact Me</a></li>
+        </ul>
+    </nav>
+</header>
+<section id="home">
+    <div id="carousel" style="display: block">
+        <div class="slideshow-container">
 
-                    <div class="mySlides fade">
-                        <div class="numbertext">1 / 8</div>
-                        <img src="images/GOT.jpg" alt="" style="width:100%">
-                        <div class="text">Game of Thrones</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">2 / 8</div>
-                        <img src="images/Fleabag.jpg" alt="" style="width:100%">
-                        <div class="text">Fleabag</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">3 / 8</div>
-                        <img src="images/LastKing.jpg" alt="" style="width:100%">
-                        <div class="text">The Last Kingdom</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">4 / 8</div>
-                        <img src="images/PeakyBlinders.jpg" alt="" style="width:100%">
-                        <div class="text">Peaky Blinders</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">5 / 8</div>
-                        <img src="images/RealShrill.jpg" alt="" style="width:100%">
-                        <div class="text">Shrill</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">6 / 8</div>
-                        <img src="images/Shameless.jpg" alt="" style="width:100%">
-                        <div class="text">Shameless</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">7 / 8</div>
-                        <img src="images/Sopranos.jpg" alt="" style="width:100%">
-                        <div class="text">The Sopranos</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">8 / 8</div>
-                        <img src="images/StrangerThings.jpg" alt="" style="width:100%">
-                        <div class="text">Stranger Things</div>
-                    </div>
-
-                </div>
-                <br>
-
-                <div style="text-align:center">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 8</div>
+                <img src="images/GOT.jpg" alt="" style="width:100%">
+                <div class="text">Game of Thrones</div>
             </div>
-        </section>
-        <main>
-            <section id="home">
-                <h3>Search For TV Shows:</h3>
-                <form>
-                    <input type="text" placeholder="Search">
-                    <button>Search</button>
-                </form>
-                <div id="tvShows">
 
-                </div>
-            </section>
-        </main>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 8</div>
+                <img src="images/Fleabag.jpg" alt="" style="width:100%">
+                <div class="text">Fleabag</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 8</div>
+                <img src="images/LastKing.jpg" alt="" style="width:100%">
+                <div class="text">The Last Kingdom</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 8</div>
+                <img src="images/PeakyBlinders.jpg" alt="" style="width:100%">
+                <div class="text">Peaky Blinders</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 8</div>
+                <img src="images/RealShrill.jpg" alt="" style="width:100%">
+                <div class="text">Shrill</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 8</div>
+                <img src="images/Shameless.jpg" alt="" style="width:100%">
+                <div class="text">Shameless</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 8</div>
+                <img src="images/Sopranos.jpg" alt="" style="width:100%">
+                <div class="text">The Sopranos</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 8</div>
+                <img src="images/StrangerThings.jpg" alt="" style="width:100%">
+                <div class="text">Stranger Things</div>
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</section>
 
 
-        <section id="about">
-            <h1>About <span style="color:#A0FA4E;font-weight:bold;font-family:"Comic Sans MS";">TV </span><span style="color:#0707C4;font-weight:bold;font-family:Times;">ShowTime</span></h1>
-        </section>
 
-        <section id="calendar">
-            <h1>Calendar</h1>
-        </section>
+<section id="showSearch">
+    <h1>Search:</h1>
+    <br><br><br><br>
+    <div id="searchDiv">
+        <form id="searchForm">
+            <label>Search For TV Shows:</label>
+            <input type="text" id="searchBox" placeholder="Search TV Shows">
+            <input type="button" id="searchButton" value="Search">
+        </form>
+    </div>
+    <div id="tvShows">
 
-        <section id="myShows">
-            <h1>My Shows:</h1>
-        </section>
+    </div>
+</section>
 
-        <section id="contact">
-            <h1>Contact Information:</h1>
-        </section>
+<section id="calendar">
+    <h1>Calendar</h1>
+</section>
+
+<section id="myShows">
+    <h1>My Shows:</h1>
+</section>
+
+<section id="contact">
+    <h1>Contact Information:</h1>
+</section>
+
+<div>
+    <footer>
+        <p>&copy 2019</p><p>Handcrafted with <3 in Connecticut, USA by Matthew A. Krieger.</p>
+        <div id="footLinks">
+            <a href="https://www.slideshare.net/slideshow/embed_code/key/2BwETVHFVtN5Y2" class="links" title="Go To Matthew's Resume" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/pc_de_hamburg_icon_pack/32x32/cv.png" alt="Resume"></a>
+
+            <a href="https://github.com/AppManNYC" class="links" title="Go To Matthew's Github Page" target="_blank"><img src="https://github.githubassets.com/favicon.ico" alt="Github"></a>
+
+            <a href="https://www.linkedin.com/in/matthewkrieger3/" class="links" title="Go To Matthew's LinkedIn Profile" target="_blank"><img src="http://www.download82.com/images/produse/iconuri/linkedin.png" alt="LinkedIn"></a>
+
+            <a href="https://twitter.com/CSGrad2017/" class="links" title="Go To Matthew's LinkedIn Profile" target="_blank"><img src="https://addons.thunderbird.net/user-media/addon_icons/578/578614-64.png?modified=1423200033" alt="Twitter"></a>
+
+
+            <a href = "mailto:MatthewKrieger.NYC@gmail.com?subject = Feedback&body = Message" title="Email Matthew Krieger" class="links"><img src="http://www.operion.com.my/main/images/icon/email.png" alt="email"></a>
+        </div>
+    </footer>
+</div>
 
 
 
-
-
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/fastclick.js"></script>
-        <script src="js/scroll.js"></script>
-        <script src="js/fixed-responsive-nav.js"></script>
-    </body>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/fastclick.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/fixed-responsive-nav.js"></script>
+</body>
 </html>
+
+
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--    <head>-->
+<!--        <meta charset="UTF-8">-->
+<!--        <title>TV ShowTime</title>-->
+<!--        <meta name="viewport" content="width=device-width,initial-scale=1">-->
+<!--        <link rel="stylesheet" href="css/main.css">-->
+<!--        <link rel="stylesheet" href="css/styles.css">-->
+<!--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<!--        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">-->
+<!--        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">-->
+<!--        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">-->
+<!--        <script src="http://code.jquery.com/jquery-3.1.1.min.js"-->
+<!--                integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="-->
+<!--                crossorigin="anonymous">-->
+<!--        </script>-->
+<!--        <script src="js/responsive-nav.js"></script>-->
+<!--    </head>-->
+<!--    <body>-->
+<!--        <header>-->
+<!--            <a href="#home" class="logo" data-scroll><span style="color:#A0FA4E;font-weight:bold;">TV </span><span style="color:#FFFFFF;font-weight:bold;font-family:Times;">ShowTime</a>-->
+<!--            <nav class="nav-collapse">-->
+<!--                <ul>-->
+<!--                    <li class="menu-item active"><a href="#home" data-scroll>Home</a></li>-->
+<!--                    <li class="menu-item"><a href="#showSearch" data-scroll>Search</a></li>-->
+<!--                    <li class="menu-item"><a href="#about" data-scroll>About</a></li>-->
+<!--                    <li class="menu-item"><a href="#calendar" data-scroll>Calendar</a></li>-->
+<!--                    <li class="menu-item"><a href="#myShows" data-scroll>My Shows</a></li>-->
+<!--                    <li class="menu-item"><a href="#contact" data-scroll>Contact Me</a></li>-->
+<!--                </ul>-->
+<!--            </nav>-->
+<!--        </header>-->
+<!--        <section>-->
+<!--            <div id="carousel" style="display: block">-->
+<!--                <div class="slideshow-container">-->
+
+<!--                    <div class="mySlides fade">-->
+<!--                        <div class="numbertext">1 / 8</div>-->
+<!--                        <img src="images/GOT.jpg" alt="" style="width:100%">-->
+<!--                        <div class="text">Game of Thrones</div>-->
+<!--                    </div>-->
+
+<!--                    <div class="mySlides fade">-->
+<!--                        <div class="numbertext">2 / 8</div>-->
+<!--                        <img src="images/Fleabag.jpg" alt="" style="width:100%">-->
+<!--                        <div class="text">Fleabag</div>-->
+<!--                    </div>-->
+
+<!--                    <div class="mySlides fade">-->
+<!--                        <div class="numbertext">3 / 8</div>-->
+<!--                        <img src="images/LastKing.jpg" alt="" style="width:100%">-->
+<!--                        <div class="text">The Last Kingdom</div>-->
+<!--                    </div>-->
+
+<!--                    <div class="mySlides fade">-->
+<!--                        <div class="numbertext">4 / 8</div>-->
+<!--                        <img src="images/PeakyBlinders.jpg" alt="" style="width:100%">-->
+<!--                        <div class="text">Peaky Blinders</div>-->
+<!--                    </div>-->
+
+<!--                    <div class="mySlides fade">-->
+<!--                        <div class="numbertext">5 / 8</div>-->
+<!--                        <img src="images/RealShrill.jpg" alt="" style="width:100%">-->
+<!--                        <div class="text">Shrill</div>-->
+<!--                    </div>-->
+
+<!--                    <div class="mySlides fade">-->
+<!--                        <div class="numbertext">6 / 8</div>-->
+<!--                        <img src="images/Shameless.jpg" alt="" style="width:100%">-->
+<!--                        <div class="text">Shameless</div>-->
+<!--                    </div>-->
+
+<!--                    <div class="mySlides fade">-->
+<!--                        <div class="numbertext">7 / 8</div>-->
+<!--                        <img src="images/Sopranos.jpg" alt="" style="width:100%">-->
+<!--                        <div class="text">The Sopranos</div>-->
+<!--                    </div>-->
+
+<!--                    <div class="mySlides fade">-->
+<!--                        <div class="numbertext">8 / 8</div>-->
+<!--                        <img src="images/StrangerThings.jpg" alt="" style="width:100%">-->
+<!--                        <div class="text">Stranger Things</div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--                <br>-->
+
+<!--                <div style="text-align:center">-->
+<!--                    <span class="dot"></span>-->
+<!--                    <span class="dot"></span>-->
+<!--                    <span class="dot"></span>-->
+<!--                    <span class="dot"></span>-->
+<!--                    <span class="dot"></span>-->
+<!--                    <span class="dot"></span>-->
+<!--                    <span class="dot"></span>-->
+<!--                    <span class="dot"></span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+<!--        <section id="home">-->
+<!--            <h3>Search For TV Shows:</h3>-->
+<!--            <form>-->
+<!--                <input type="text" placeholder="Search">-->
+<!--                <button>Search</button>-->
+<!--            </form>-->
+<!--            <div id="tvShows">-->
+
+<!--            </div>-->
+<!--        </section>-->
+<!--        <section id="showSearch">-->
+<!--                <h1>Search:</h1>-->
+<!--                <div id="searchDiv">-->
+<!--                    <form id="searchForm">-->
+<!--                        <label>Search For TV Shows:</label>-->
+<!--                        <input type="text" id="searchBox" placeholder="Search TV Shows">-->
+<!--                        <input type="button" id="searchButton" value="Search">-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--                <div id="tvShows">-->
+
+<!--                </div>-->
+<!--        </section>-->
+
+<!--        <section id="about">-->
+<!--            <h1>About <span style="color:#A0FA4E;font-weight:bold;font-family:"Comic Sans MS";">TV </span><span style="color:#0707C4;font-weight:bold;font-family:Times;">ShowTime</span>:</h1>-->
+<!--        </section>-->
+
+<!--        <section id="calendar">-->
+<!--            <h1>Calendar:</h1>-->
+<!--        </section>-->
+
+<!--        <section id="myShows">-->
+<!--            <h1>My Shows:</h1>-->
+<!--        </section>-->
+
+<!--        <section id="contact">-->
+<!--            <h1>Contact Information:</h1>-->
+<!--        </section>-->
+
+
+
+<!--&lt;!&ndash;        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;        <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;        <script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>&ndash;&gt;-->
+<!--        <script src="js/app.js"></script>-->
+<!--        <script src="js/fastclick.js"></script>-->
+<!--        <script src="js/scroll.js"></script>-->
+<!--        <script src="js/fixed-responsive-nav.js"></script>-->
+<!--    </body>-->
+<!--</html>-->
