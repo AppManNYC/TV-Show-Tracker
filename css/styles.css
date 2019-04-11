@@ -86,11 +86,22 @@ body {
 }
 
 section {
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #A0FA4E;
   text-align: center;
   padding: 100px 0 0;
   height: 800px;
   width: 100%;
+  display: block;
+}
+
+#home {
+  height: 500px;
+  border-bottom: 0 solid #A0FA4E;
+  padding: 0;
+}
+
+#search {
+  height: 400px;
 }
 
 h1 {

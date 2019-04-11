@@ -1,9 +1,7 @@
 
-bjavascript:S1854K":Remove this useless assignment to local variable "genres2"(İºïôúÿÿÿÿ8û¡ŞòŸ-
-djavascript:UnusedVariableL"8Remove the declaration of the unused 'genres1' variable.(¥©õ³8û¡ŞòŸ-
-Djavascript:S1116l"Remove this empty statement.(ôŸìúÿÿÿÿ8‘ˆƒíŸ-
-Djavascript:S1116?"Remove this empty statement.(ôŸìúÿÿÿÿ8¬šüÌŸ-
-Djavascript:S11168"Remove this empty statement.(ôŸìúÿÿÿÿ8é‚™› -
-Djavascript:S1116u"Remove this empty statement.(ôŸìúÿÿÿÿ8ïëš› -
-]javascript:S1854L":Remove this useless assignment to local variable "genres1"(¥©õ³8û¡ŞòŸ-
-ijavascript:UnusedVariableK"8Remove the declaration of the unused 'genres2' variable.(İºïôúÿÿÿÿ8û¡ŞòŸ-
+]javascript:S1854I":Remove this useless assignment to local variable "genres1"(¥©õ³8ìÈóÅ -
+bjavascript:S1854H":Remove this useless assignment to local variable "genres2"(İºïôúÿÿÿÿ8ìÈóÅ -
+ijavascript:UnusedVariableH"8Remove the declaration of the unused 'genres2' variable.(İºïôúÿÿÿÿ8ìÈóÅ -
+Djavascript:S1116<"Remove this empty statement.(ôŸìúÿÿÿÿ8ìÈóÅ -
+Djavascript:S1116i"Remove this empty statement.(ôŸìúÿÿÿÿ8ìÈóÅ -
+djavascript:UnusedVariableI"8Remove the declaration of the unused 'genres1' variable.(¥©õ³8ìÈóÅ -
