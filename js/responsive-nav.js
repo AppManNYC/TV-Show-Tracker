@@ -8,9 +8,7 @@
 
     let computed = !!window.getComputedStyle;
 
-    /**
-     * getComputedStyle polyfill for old browsers
-     */
+
     if (!computed) {
       window.getComputedStyle = function(el) {
         this.el = el;
@@ -29,18 +27,8 @@
         return this;
       };
     }
-    /* exported addEvent, removeEvent, getChildren, setAttributes, addClass, removeClass, forEach */
 
-    /**
-     * Add Event
-     * fn arg can be an object or a function, thanks to handleEvent
-     * read more at: http://www.thecssninja.com/javascript/handleevent
-     *
-     * @param  {element}  element
-     * @param  {event}    event
-     * @param  {Function} fn
-     * @param  {boolean}  bubbling
-     */
+
     let addEvent = function (el, evt, fn, bubble) {
         if ("addEventListener" in el) {
           // BBOS6 doesn't support handleEvent, catch and polyfill
@@ -69,14 +57,7 @@
         }
       },
 
-      /**
-       * Remove Event
-       *
-       * @param  {element}  element
-       * @param  {event}    event
-       * @param  {Function} fn
-       * @param  {boolean}  bubbling
-       */
+
       removeEvent = function (el, evt, fn, bubble) {
         if ("removeEventListener" in el) {
           try {
@@ -101,12 +82,7 @@
         }
       },
 
-      /**
-       * Get the children of any element
-       *
-       * @param  {element}
-       * @return {array} Returns matching elements in an array
-       */
+
       getChildren = function (e) {
         if (e.children.length < 1) {
           throw new Error("The Nav container has no containing elements");
