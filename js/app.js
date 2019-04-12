@@ -27,22 +27,22 @@ let app = {};
 $('#searchButton').click(function(e){
 	e.preventDefault();
 	$('#tvMaze').empty();
-	let word = $('#searchBox').val();
-	app.getTVshow(word);
+	let term = $('#searchBox').val();
+	app.retrieveShows(term);
 });
 
-app.getTVshow = function(inputWord){
+app.retrieveShows = function(searchTerm){
 	$.ajax({
 		url: 'http://api.tvmaze.com/search/shows',
 		method: 'GET',
 		dataType: 'json',
 		data: {
 			format: 'json',
-			q: inputWord
+			q: searchTerm
 		},
 		success: function(result){
 			console.log('Ajax is working.');
-			app.displayTV(result);
+			app.renderShows(result);
 		},
 		error: function(error){
 			console.log('Something went wrong.');
@@ -51,7 +51,7 @@ app.getTVshow = function(inputWord){
 	});
 };
 
-app.displayTV = function(tvInfoArray){
+app.renderShows = function(showArray){
 
 	let count; // declare a let to hold the shows number
 	if (count == undefined) {
@@ -59,21 +59,21 @@ app.displayTV = function(tvInfoArray){
 	};
 
 	// using jQuery forEach to loop over our array of tv information
-	tvInfoArray.forEach(function(tvInfo){
+	showArray.forEach(function(tvShow){
 
 		// Creating elements for each piece of data
-		let name = $('<h2>').text(tvInfo.show.name);
-		let nameBox = $('<h3>').text(tvInfo.show.name).css({"border-bottom": "2px solid red"});
-		let language = $('<i>').text(tvInfo.show.language);
-		let genres = $('<p>').text(tvInfo.show.genres[0]);
-		let channel = $('<p>').text(tvInfo.show.network.name);
-		let country = $('<p>').text('( ' + tvInfo.show.network.country.name + ' )');
-		let image = $('<img>').attr('src', tvInfo.show.image.original).css({"height": "300px", "width": "200px"});
-		let imageBox = $('<img>').attr('src', tvInfo.show.image.original);
-		let summary = tvInfo.show.summary;
+		let name = $('<h2>').text(tvShow.show.name);
+		let nameBox = $('<h3>').text(tvShow.show.name).css({"border-bottom": "2px solid red"});
+		let language = $('<i>').text(tvShow.show.language);
+		let genres = $('<p>').text(tvShow.show.genres[0]);
+		let channel = $('<p>').text(tvShow.show.network.name);
+		let country = $('<p>').text('( ' + tvShow.show.network.country.name + ' )');
+		let image = $('<img>').attr('src', tvShow.show.image.original).css({"height": "300px", "width": "200px"});
+		let imageBox = $('<img>').attr('src', tvShow.show.image.original);
+		let summary = tvShow.show.summary;
 
 		// make images clickable
-		let clkImage = $('<a>').attr('href', tvInfo.show.image.original).append(image);
+		let clkImage = $('<a>').attr('href', tvShow.show.image.original).append(image);
 
 		// appending in divs only name and image for the search
 		let shows = $('<div>').addClass('shows').append(name, clkImage);
@@ -122,4 +122,4 @@ app.displayTV = function(tvInfoArray){
 		});
 
 	});  // end forEach loop function
-}; //end app.displayTV function
+}; //end app.renderShows function
