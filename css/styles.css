@@ -250,7 +250,38 @@ header {
     display: none;
   }
 }
-
+@media only screen and (max-width: 1050px)  {
+  #searchForm {
+    width: 50%;
+  }
+  #searchBox {
+    width: 33%
+  }
+}
+@media only screen and (max-width: 900px)  {
+  #searchForm {
+    width: 60%;
+  }
+  #searchBox {
+    width: 45%
+  }
+}
+@media only screen and (max-width: 600px)  {
+  #searchForm {
+    width: 70%;
+  }
+  #searchBox {
+    width: 60%
+  }
+}
+@media only screen and (max-width: 300px)  {
+  #searchForm {
+    width: 80%;
+  }
+  #searchBox {
+    width: 70%
+  }
+}
 
 @font-face {
   font-family: "responsivenav";

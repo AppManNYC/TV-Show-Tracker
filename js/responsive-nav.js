@@ -12,9 +12,9 @@
 
   "use strict";
 
-  var responsiveNav = function (el, options) {
+  let responsiveNav = function (el, options) {
 
-    var computed = !!window.getComputedStyle;
+    let computed = !!window.getComputedStyle;
 
     /**
      * getComputedStyle polyfill for old browsers
@@ -23,7 +23,7 @@
       window.getComputedStyle = function(el) {
         this.el = el;
         this.getPropertyValue = function(prop) {
-          var re = /(\-([a-z]){1})/g;
+          let re = /(\-([a-z]){1})/g;
           if (prop === "float") {
             prop = "styleFloat";
           }
@@ -49,7 +49,7 @@
      * @param  {Function} fn
      * @param  {boolean}  bubbling
      */
-    var addEvent = function (el, evt, fn, bubble) {
+    let addEvent = function (el, evt, fn, bubble) {
         if ("addEventListener" in el) {
           // BBOS6 doesn't support handleEvent, catch and polyfill
           try {
@@ -120,9 +120,9 @@
           throw new Error("The Nav container has no containing elements");
         }
         // Store all children in array
-        var children = [];
+        let children = [];
         // Loop through children and store in array if child != TextNode
-        for (var i = 0; i < e.children.length; i++) {
+        for (let i = 0; i < e.children.length; i++) {
           if (e.children[i].nodeType === 1) {
             children.push(e.children[i]);
           }
@@ -137,7 +137,7 @@
        * @param {attrs}   attrs
        */
       setAttributes = function (el, attrs) {
-        for (var key in attrs) {
+        for (let key in attrs) {
           el.setAttribute(key, attrs[key]);
         }
       },
@@ -162,7 +162,7 @@
        * @param  {string}  class
        */
       removeClass = function (el, cls) {
-        var reg = new RegExp("(\\s|^)" + cls + "(\\s|$)");
+        let reg = new RegExp("(\\s|^)" + cls + "(\\s|$)");
         el.className = el.className.replace(reg, " ").replace(/(^\s*)|(\s*$)/g,"");
       },
 
@@ -174,12 +174,12 @@
        * @param  {scope}    scope
        */
       forEach = function (array, callback, scope) {
-        for (var i = 0; i < array.length; i++) {
+        for (let i = 0; i < array.length; i++) {
           callback.call(scope, i, array[i]);
         }
       };
 
-    var nav,
+    let nav,
       opts,
       navToggle,
       styleElement = document.createElement("style"),
@@ -188,8 +188,8 @@
       isMobile,
       navOpen;
 
-    var ResponsiveNav = function (el, options) {
-        var i;
+    let ResponsiveNav = function (el, options) {
+        let i;
 
         /**
          * Default options
@@ -372,7 +372,7 @@
        * @return {type} returns the type of event that should be used
        */
       handleEvent: function (e) {
-        var evt = e || window.event;
+        let evt = e || window.event;
 
         switch (evt.type) {
         case "touchstart":
@@ -420,7 +420,7 @@
          * so it's called here again on init to make sure all the
          * calculated styles are correct.
          */
-        var self = this;
+        let self = this;
         setTimeout(function () {
           self.resize();
         }, 20);
@@ -466,7 +466,7 @@
 
         // If there's no toggle, let's create one
         if (!opts.customToggle) {
-          var toggle = document.createElement("a");
+          let toggle = document.createElement("a");
           toggle.innerHTML = opts.label;
           setAttributes(toggle, {
             "href": "#",
@@ -484,7 +484,7 @@
 
         // There is a toggle already, let's use that one
         } else {
-          var toggleEl = opts.customToggle.replace("#", "");
+          let toggleEl = opts.customToggle.replace("#", "");
 
           if (document.getElementById(toggleEl)) {
             navToggle = document.getElementById(toggleEl);
@@ -501,7 +501,7 @@
        */
       _closeOnNavClick: function () {
         if (opts.closeOnNavClick) {
-          var links = nav.getElementsByTagName("a"),
+          let links = nav.getElementsByTagName("a"),
             self = this;
           forEach(links, function (i, el) {
             addEvent(links[i], "click", function () {
@@ -586,7 +586,7 @@
 
           // Event type was click, not touch
           } else {
-            var evt = e || window.event;
+            let evt = e || window.event;
 
             // If it isn't a right click, do toggling
             if (!(evt.which === 3 || evt.button === 2)) {
@@ -603,7 +603,7 @@
        * @param  {event} event
        */
       _onKeyUp: function (e) {
-        var evt = e || window.event;
+        let evt = e || window.event;
         if (evt.keyCode === 13) {
           this.toggle();
         }
@@ -614,7 +614,7 @@
        */
       _transitions: function () {
         if (opts.animate) {
-          var objStyle = nav.style,
+          let objStyle = nav.style,
             transition = "max-height " + opts.transition + "ms";
 
           objStyle.WebkitTransition =
@@ -629,12 +629,12 @@
        * styles which are later added to the page <head>
        */
       _calcHeight: function () {
-        var savedHeight = 0;
-        for (var i = 0; i < nav.inner.length; i++) {
+        let savedHeight = 0;
+        for (let i = 0; i < nav.inner.length; i++) {
           savedHeight += nav.inner[i].offsetHeight;
         }
 
-        var innerStyles = "." + opts.jsClass + " ." + opts.navClass + "-" + this.index + ".opened{max-height:" + savedHeight + "px !important} ." + opts.jsClass + " ." + opts.navClass + "-" + this.index + ".opened.dropdown-active {max-height:9999px !important}";
+        let innerStyles = "." + opts.jsClass + " ." + opts.navClass + "-" + this.index + ".opened{max-height:" + savedHeight + "px !important} ." + opts.jsClass + " ." + opts.navClass + "-" + this.index + ".opened.dropdown-active {max-height:9999px !important}";
 
         if (styleElement.styleSheet) {
           styleElement.styleSheet.cssText = innerStyles;

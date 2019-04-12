@@ -1,7 +1,7 @@
-var messageBox = document.querySelector('.js-message');
-var btn = document.querySelector('.js-message-btn');
-var card = document.querySelector('.js-profile-card');
-var closeBtn = document.querySelectorAll('.js-message-close');
+let messageBox = document.querySelector('.js-message');
+let btn = document.querySelector('.js-message-btn');
+let card = document.querySelector('.js-profile-card');
+let closeBtn = document.querySelectorAll('.js-message-close');
 
 btn.addEventListener('click',function (e) {
     e.preventDefault();
