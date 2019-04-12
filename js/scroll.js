@@ -6,7 +6,7 @@ window.smoothScroll = (function (window, document, undefined) {
 
   // Default settings
   // Private {object} variable
-  var _defaults = {
+  let _defaults = {
     speed: 500,
     easing: 'easeInOutCubic',
     updateURL: false,
@@ -17,7 +17,7 @@ window.smoothScroll = (function (window, document, undefined) {
   // Merge default settings with user options
   // Private method
   // Returns an {object}
-  var _mergeObjects = function ( original, updates ) {
+  let _mergeObjects = function ( original, updates ) {
     for (var key in updates) {
       original[key] = updates[key];
     }
@@ -27,7 +27,7 @@ window.smoothScroll = (function (window, document, undefined) {
   // Calculate the easing pattern
   // Private method
   // Returns a decimal number
-  var _easingPattern = function ( type, time ) {
+  let _easingPattern = function ( type, time ) {
     if ( type == 'easeInQuad' ) return time * time; // accelerating from zero velocity
     if ( type == 'easeOutQuad' ) return time * (2 - time); // decelerating to zero velocity
     if ( type == 'easeInOutQuad' ) return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time; // acceleration until halfway, then deceleration
