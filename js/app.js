@@ -33,7 +33,7 @@ $('#searchButton').click(function(e){
 
 app.retrieveShows = function(searchTerm){
 	$.ajax({
-		url: 'http://api.tvmaze.com/search/shows',
+		url: 'https://api.tvmaze.com/search/shows',
 		method: 'GET',
 		dataType: 'json',
 		data: {
