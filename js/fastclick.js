@@ -403,7 +403,7 @@ FastClick.prototype.onTouchStart = function(event) {
 
 FastClick.prototype.touchHasMoved = function(event) {
   'use strict';
-  var touch = event.changedTouches[0], boundary = this.touchBoundary;
+  let touch = event.changedTouches[0], boundary = this.touchBoundary;
 
   if (Math.abs(touch.pageX - this.touchStartX) > boundary || Math.abs(touch.pageY - this.touchStartY) > boundary) {
     return true;
@@ -456,7 +456,7 @@ FastClick.prototype.findControl = function(labelElement) {
  */
 FastClick.prototype.onTouchEnd = function(event) {
   'use strict';
-  var forElement, trackingClickStart, targetTagName, scrollParent, touch, targetElement = this.targetElement;
+  let forElement, trackingClickStart, targetTagName, scrollParent, touch, targetElement = this.targetElement;
 
   if (!this.trackingClick) {
     return true;
@@ -584,7 +584,7 @@ FastClick.prototype.onMouse = function(event) {
 
 FastClick.prototype.onClick = function(event) {
   'use strict';
-  var permitted;
+  let permitted;
 
   // It's possible for another FastClick-like library delivered with third-party code to fire a click event before FastClick does (issue #44). In that case, set the click-tracking flag back to false and return early. This will cause onTouchEnd to return early.
   if (this.trackingClick) {
@@ -610,7 +610,7 @@ FastClick.prototype.onClick = function(event) {
 
 FastClick.prototype.destroy = function() {
   'use strict';
-  var layer = this.layer;
+  let layer = this.layer;
 
   if (deviceIsAndroid) {
     layer.removeEventListener('mouseover', this.onMouse, true);
@@ -629,8 +629,8 @@ FastClick.prototype.destroy = function() {
 
 FastClick.notNeeded = function(layer) {
   'use strict';
-  var metaViewport;
-  var chromeVersion;
+  let metaViewport;
+  let chromeVersion;
 
   if (typeof window.ontouchstart === 'undefined') {
     return true;

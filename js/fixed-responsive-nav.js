@@ -7,8 +7,8 @@
   if ("querySelector" in document && "addEventListener" in window) {
 
     // forEach method, that passes back the stuff we need
-    var forEach = function (array, callback, scope) {
-      for (var i = 0; i < array.length; i++) {
+    let forEach = function (array, callback, scope) {
+      for (let i = 0; i < array.length; i++) {
         callback.call(scope, i, array[i]);
       }
     };
@@ -20,14 +20,14 @@
     smoothScroll.init();
 
     // Init Responsive Nav
-    var navigation = responsiveNav(".nav-collapse", {
+    let navigation = responsiveNav(".nav-collapse", {
 
       // Close the navigation when it's tapped
       closeOnNavClick: true
     });
 
     // Create a Mask
-    var mask = document.createElement("div");
+    let mask = document.createElement("div");
     mask.className = "mask";
 
     // Append the mask inside <body>
@@ -39,17 +39,17 @@
     }
 
     // Find navigation links and save a reference to them
-    var nav = document.querySelector(".nav-collapse ul"),
+    let nav = document.querySelector(".nav-collapse ul"),
       links = nav.querySelectorAll("[data-scroll]");
 
     // "content" will store all the location cordinates
-    var content;
+    let content;
 
     // Set up an array of locations which we store in "content"
-    var setupLocations = function () {
+    let setupLocations = function () {
       content = [];
       forEach(links, function (i, el) {
-        var href = links[i].getAttribute("href").replace("#", "");
+        let href = links[i].getAttribute("href").replace("#", "");
         content.push(document.getElementById(href).offsetTop + 200);
       });
     };
@@ -63,7 +63,7 @@
     }, false);
 
     // Highlight active link on the navigation
-    var selectActiveMenuItem = function (i) {
+    let selectActiveMenuItem = function (i) {
       forEach(links, function (i, el) {
         links[i].parentNode.className = links[i].parentNode.className.replace(/[\s]{0,}active/, "");
       });
@@ -71,11 +71,11 @@
     };
 
     // Highlight active link when scrolling
-    var wasNavigationTapped = false;
+    let wasNavigationTapped = false;
     window.addEventListener("scroll", function () {
 
       // Determine viewport and body size
-      var top = window.pageYOffset,
+      let top = window.pageYOffset,
         body = document.body,
         html = document.documentElement,
         viewport = window.innerHeight,
@@ -104,7 +104,7 @@
     }, false);
 
     // Clear wasNavigationTapped check after scrolling
-    var clearTapCheck = function () {
+    let clearTapCheck = function () {
       setTimeout(function () {
         wasNavigationTapped = false;
       }, 500);
@@ -140,7 +140,7 @@
         selectActiveMenuItem(i);
 
         // Show the URL of the section on the address bar
-        var thisID = this.getAttribute("href").replace("#", ""),
+        let thisID = this.getAttribute("href").replace("#", ""),
           pane = document.getElementById(thisID);
 
         // If the URL isn't "#home", change it

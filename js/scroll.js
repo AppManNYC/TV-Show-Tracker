@@ -46,8 +46,8 @@ window.smoothScroll = (function (window, document, undefined) {
   // Calculate how far to scroll
   // Private method
   // Returns an integer
-  var _getEndLocation = function ( anchor, headerHeight ) {
-    var location = 0;
+  let _getEndLocation = function ( anchor, headerHeight ) {
+    let location = 0;
     if (anchor.offsetParent) {
       do {
         location += anchor.offsetTop;
@@ -65,12 +65,12 @@ window.smoothScroll = (function (window, document, undefined) {
   // Convert data-options attribute into an object of key/value pairs
   // Private method
   // Returns an {object}
-  var _getDataOptions = function ( options ) {
+  let _getDataOptions = function ( options ) {
 
     if ( options === null || options === undefined  ) {
       return {};
     } else {
-      var settings = {}; // Create settings object
+      let settings = {}; // Create settings object
       options = options.split(';'); // Split into array of options
 
       // Create a key/value pair for each setting
@@ -90,7 +90,7 @@ window.smoothScroll = (function (window, document, undefined) {
   // Update the URL
   // Private method
   // Runs functions
-  var _updateURL = function ( anchor, url ) {
+  let _updateURL = function ( anchor, url ) {
     if ( (url === true || url === 'true') && history.pushState ) {
       history.pushState( {pos:anchor.id}, '', anchor );
     }
@@ -99,23 +99,23 @@ window.smoothScroll = (function (window, document, undefined) {
   // Start/stop the scrolling animation
   // Public method
   // Runs functions
-  var animateScroll = function ( toggle, anchor, options, event ) {
+  let animateScroll = function ( toggle, anchor, options, event ) {
 
     // Options and overrides
     options = _mergeObjects( _defaults, options || {} ); // Merge user options with defaults
-    var overrides = _getDataOptions( toggle ? toggle.getAttribute('data-options') : null );
-    var speed = overrides.speed || options.speed;
-    var easing = overrides.easing || options.easing;
-    var updateURL = overrides.updateURL || options.updateURL;
+    let overrides = _getDataOptions( toggle ? toggle.getAttribute('data-options') : null );
+    let speed = overrides.speed || options.speed;
+    let easing = overrides.easing || options.easing;
+    let updateURL = overrides.updateURL || options.updateURL;
 
-    // Selectors and variables
-    var headerHeight = 55;
-    var startLocation = window.pageYOffset; // Current location on the page
-    var endLocation = _getEndLocation( document.querySelector(anchor), headerHeight ); // Scroll to location
-    var animationInterval; // interval timer
-    var distance = endLocation - startLocation; // distance to travel
-    var timeLapsed = 0;
-    var percentage, position;
+    // Selectors and letiables
+    let headerHeight = 55;
+    let startLocation = window.pageYOffset; // Current location on the page
+    let endLocation = _getEndLocation( document.querySelector(anchor), headerHeight ); // Scroll to location
+    let animationInterval; // interval timer
+    let distance = endLocation - startLocation; // distance to travel
+    let timeLapsed = 0;
+    let percentage, position;
 
     // Prevent default click event
     if ( toggle && toggle.tagName === 'A' && event ) {
@@ -128,8 +128,8 @@ window.smoothScroll = (function (window, document, undefined) {
     // Stop the scroll animation when it reaches its target (or the bottom/top of page)
     // Private method
     // Runs functions
-    var _stopAnimateScroll = function (position, endLocation, animationInterval) {
-      var currentLocation = window.pageYOffset;
+    let _stopAnimateScroll = function (position, endLocation, animationInterval) {
+      let currentLocation = window.pageYOffset;
       if ( position == endLocation || currentLocation == endLocation || ( (window.innerHeight + currentLocation) >= document.body.scrollHeight ) ) {
         clearInterval(animationInterval);
         options.callbackAfter( toggle, anchor ); // Run callbacks after animation complete
@@ -139,7 +139,7 @@ window.smoothScroll = (function (window, document, undefined) {
     // Loop scrolling animation
     // Private method
     // Runs functions
-    var _loopAnimateScroll = function () {
+    let _loopAnimateScroll = function () {
       timeLapsed += 16;
       percentage = ( timeLapsed / speed );
       percentage = ( percentage > 1 ) ? 1 : percentage;
@@ -151,7 +151,7 @@ window.smoothScroll = (function (window, document, undefined) {
     // Set interval timer
     // Private method
     // Runs functions
-    var _startAnimateScroll = function () {
+    let _startAnimateScroll = function () {
       options.callbackBefore( toggle, anchor ); // Run callbacks before animating scroll
       animationInterval = setInterval(_loopAnimateScroll, 16);
     };
@@ -170,14 +170,14 @@ window.smoothScroll = (function (window, document, undefined) {
   // Initialize Smooth Scroll
   // Public method
   // Runs functions
-  var init = function ( options ) {
+  let init = function ( options ) {
 
     // Feature test before initializing
     if ( 'querySelector' in document && 'addEventListener' in window && Array.prototype.forEach ) {
 
-      // Selectors and variables
+      // Selectors and letiables
       options = _mergeObjects( _defaults, options || {} ); // Merge user options with defaults
-      var toggles = document.querySelectorAll('[data-scroll]'); // Get smooth scroll toggles
+      let toggles = document.querySelectorAll('[data-scroll]'); // Get smooth scroll toggles
 
       // When a toggle is clicked, run the click handler
       Array.prototype.forEach.call(toggles, function (toggle, index) {
